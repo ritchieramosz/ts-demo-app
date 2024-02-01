@@ -16,6 +16,7 @@ interface User {
   email: string;
 }
 
+/*
 // Configure database connection
 
 const db = createConnection({
@@ -31,11 +32,11 @@ db.connect((err: MysqlError | null) => {
   if (err) throw err;
   console.log('Connected to the database');
 });
-
+*/
 app.get('/status', (req: Request, res: Response) => {
   res.sendStatus(200);
 });
-
+/*
 // Dummy endpoint that gets all data from a 'users' table
 app.get('/users', (req: Request, res: Response) => {
   db.query('SELECT * FROM users', (err: MysqlError | null, results: User[], fields: FieldInfo[] | undefined) => {
@@ -61,7 +62,7 @@ app.post('/users', (req: Request, res: Response) => {
   });
 });
 
-
+*/
 // Start the server
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
